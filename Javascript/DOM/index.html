@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" id="nume" placeholder="Name">
+        <input type="text" id="varsta" placeholder="Age">
+
+        <input type="text" id="sterge">
+        <button onclick="addElements()">Add elements</button><br><br>
+
+        <button onclick="removeElement()">Remove Element</button><br><br>
+
+        <table border="2px" width="20%" id="tabel">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+
+        </table>
+
+
+        <script>
+            function addElements(){
+                var tabel = document.getElementById('tabel');
+                var tr = document.createElement('tr');
+                tabel.appendChild(tr);
+                var td1 = document.createElement('td');
+                td1.innerText = document.getElementById('nume').value;
+                tr.appendChild(td1);
+                var td2 = document.createElement('td');
+                td2.innerText = document.getElementById('varsta').value;
+                tr.appendChild(td2);
+
+                nume.value = ' ';
+                varsta.value = ' ';
+            }
+
+
+            function removeElement(){
+                // var elements = document.querySelectorAll('tr');
+                // var tabel = document.getElementById('tabel');
+                // // if(elements.length >= 2){
+                // //     tabel.removeChild(elements[1]);
+                // // }
+
+                // if(elements.length < 2){
+                //     return;
+                // }
+                // tabel.removeChild(elements[1]);
+
+
+
+                // var elements = document.querySelectorAll('tr');
+                // var name = document.getElementById('sterge').value;
+                // for(var i = 0; i < elements.length; i++){
+                //     if(elements[i].firstChild.innerText == name){
+                //         var tabel = elements[i].parentElement;
+                //         tabel.removeChild(elements[i]);
+                //     }
+                // }
+
+
+                var elements = document.querySelectorAll('tr');
+                var name = document.getElementById('sterge').value;
+                for(var i = 0; i < elements.length; i++){
+                    if(elements[i].childNodes[0].innerText == name){
+                        var tabel = elements[i].parentElement;
+                        tabel.removeChild(elements[i]);
+                    }
+                }
+                
+            }
+        </script>
+    </body>
+</html>

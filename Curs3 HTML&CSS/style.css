@@ -1,0 +1,9 @@
+
+body{
+    background-image: url(logo.png.jpg);
+    background-repeat: repeat-y;
+}
+
+h1{
+    color: blue;
+}

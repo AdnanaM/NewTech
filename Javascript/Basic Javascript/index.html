@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .box{
+                width: 200px;
+                height: 200px;
+                border: 1px solid green;
+            }
+
+            #num{
+                width: 20%;
+                height: 150px;
+                border: 3px solid blue;
+                text-align: center;
+                padding: 5px;
+                font-size: 100px;
+                margin-left: 40%;
+                margin-top: 10%;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <h4>1. Write a program that picks up three numbers from the user and display their sum.</h4> <br><br>
+            <input type="text" id="number1">
+            <input type="text" id="number2">
+            <input type="text" id="number3">
+            <button onclick="amount()">Add 3 numbers and display their amount</button> -->
+
+
+
+
+
+            <!-- <h4>2. Afiseaza in alerta suma a doua numere introduse in PROMPT la apasarea butonului Click Me.</h4> <br><br>
+            <button onclick="sum()">Click Me</button> -->
+
+
+
+
+            <!-- <h4>3. Print your name in the console.</h4> <br><br>
+            <button onclick="showMyName()">Click Me</button> -->
+
+
+
+            <!-- <h4>4. Print your name in the alert.</h4> <br><br>
+            <button onclick="showMyName()">Click Me</button> -->
+
+
+            <!-- <h4>5. Print your name in a "p" tag.</h4> <br><br>
+            <button onclick="showMyName()">Click Me</button>
+            <p id="name"></p> -->
+
+
+            <!-- <h4>6. Print your name in a "p" tag with background, color and border.</h4> <br><br>
+            <button onclick="showMyName()">Click Me</button>
+            <p id="name"></p> -->
+
+
+            <!-- <h4>7. 2 function: "reset" and "enlarge". </h4> <br><br>
+            <button onclick="reset()">Reset</button>
+            <button onclick="enlarge()">Enlarge</button>
+            <p id="details"></p>  -->
+
+
+            <!-- <h4>8. Write a function that receives 2 numbers from the users </h4> <br><br>
+            <input type="text" id="number1">
+            <input type="text" id="number2">
+            <button onclick="sum()">Click Me</button>
+            <p id="sum"></p> -->
+
+
+
+            <!-- <h4>9. Write a function that receives 3 numbers from the users </h4> <br><br>
+            <input type="text" id="number1">
+            <input type="text" id="number2">
+            <input type="text" id="number3">
+            <button onclick="average()">Click Me</button>
+            <p id="average"></p> -->
+
+
+            <!-- <h4>10. Write a function that receives from the user city and country. </h4> <br><br>
+            <input type="text" id="first">
+            <input type="text" id="second">
+            <button onclick="cityCountry()">Click Me</button>
+            <p id="details"></p> -->
+
+
+
+            <!-- <h4>11. Write a function that captures color from a user and paints the background in that color. </h4> <br><br>
+            <input type="text" id="color">
+            <button onclick="color()">Click Me</button> -->
+
+
+
+            <!-- <h4>12. Write 2 functions: one of them paints the background and the other paints the text color. </h4> <br><br>
+            <div id="myDiv" class="box">Javascript</div><br>
+            <input type="text" id="writeColor">
+            <button onclick="selectBackColor()">Click for background</button>
+            <button onclick="selectTextColor()">Click for color text</button> -->
+
+
+
+            <!-- <h4>13. Write a function that rolls a random number between 0 and 100 </h4> <br><br>
+            <div id="num" onclick="randomNumber()"></div> -->
+
+
+            <script>
+                // function amount(){  //Functie ex1
+                //     var num1 = document.getElementById('number1').value;
+                //     var num2 = document.getElementById('number2').value;
+                //     var num3 = document.getElementById('number3').value;
+                //     var sum = parseint(num1) + parseint(num2) + parseint(num3);
+                //     alert(sum)
+                // }
+
+
+
+                // function sum(){ //Functie ex2
+                //     var num1 = prompt('print first number');
+                //     var num2 = prompt('print second number');
+                //     var sum = parseInt(num1) + parseInt(num2);
+                //     alert(sum);
+                // }
+
+
+
+                // function showMyName(){ //functie ex3
+                //     console.log('My name is Adnana Muresan');
+                // }
+
+
+
+                // function showMyName(){ //functie ex4
+                //     alert('My name is Adnana Muresan');
+                // }
+
+
+                // function showMyName(){ //functie ex5
+                //     document.getElementById('name').innerText='My name is Adnana Muresan';
+                // } 
+
+
+                // function showMyName(){ //functie ex6
+                //     document.getElementById('name').innerText='My name is Adnana Muresan';
+                //     document.getElementById('name').style.background="yellow";
+                //     document.getElementById('name').style.color="blue";
+                //     document.getElementById('name').style.border="1px solid green";
+                // } 
+
+
+                // let paragraph = document.getElementById('details');  // functii ex7 
+                // function reset(){
+                //     paragraph.innerText = "Javascript";
+                //     paragraph.style.width = "10px";
+                //     paragraph.style.background = "yellow";
+                // }
+
+                // function enlarge(){
+                //     let newWidth = parseInt(paragraph.style.width) + 10;
+                //     paragraph.style.width = newWidth + "px";
+                // }
+
+
+
+                // function sum(){   // functie ex8
+                //     let no1 = document.getElementById('number1').value;
+                //     let no2 = document.getElementById('number2').value;
+                //     let sum = parseInt(no1) + parseInt(no2);
+                //     alert(sum);
+                //     document.getElementById('sum').innerText = "Sum is: " + sum;
+                // }
+
+
+
+                // function average(){   // functie ex9
+                //     let no1 = document.getElementById('number1').value;
+                //     let no2 = document.getElementById('number2').value;
+                //     let no3 = document.getElementById('number3').value;
+                //     let average = (parseInt(no1) + parseInt(no2) + parseInt(no3)) / 3;
+                //     alert(average);
+                //     document.getElementById("average").innerText = "Average is: " + average;
+                // }
+
+
+
+                // function cityCountry(){   // functie ex10
+                //     let city = document.getElementById("first").value;
+                //     let country = document.getElementById("second").value;
+                //     alert("The city is " + city + " and the country is " + country + ".");
+                //     document.getElementById("details").innerText = "The city is " + city + " and the country is " + country + ".";
+                // }
+
+
+                // function color(){   //functie ex11
+                //     let color = document.getElementById('color').value;
+                //     document.body.style.backgroundColor = color;
+                // }
+
+
+                // function selectBackColor(){   // functie ex12
+                //     let background = document.getElementById('writeColor').value;
+                //     document.getElementById('myDiv').style.backgroundColor = background;
+                // }
+
+                // function selectTextColor(){
+                //     let color = document.getElementById('writeColor').value;
+                //     document.getElementById("myDiv").style.color = color;
+                // }
+
+                // function randomNumber(){   //functie ex13
+                //     document.getElementById('num').innerText = Math.floor(Math.random() * 100);
+                // }
+            </script>
+    </body>
+</html>
