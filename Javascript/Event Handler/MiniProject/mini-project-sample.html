@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body class="backGroundBody">
+        <h1> Which letter does it start with? </h1>
+        <h1 class="countQuestion"> Question number 1 </h1>
+
+        <div class = "imgGuess">
+            <img id= "imgToGuess" src="images/hat.png">
+        </div>
+
+        <div class ="input">
+            <input type= "text" id ="input">
+            <button class = "btn play"> Play </button>
+        </div> 
+
+        <div class="output">
+            <h2 class="message"> correct number </h2>
+            <h2 class="score">score : 10</h2>
+            <h2 class="highscore">🍭 high score : 0</h2>
+        </div> 
+
+        <div class="playAgain hidden">
+            <button>Game over! Let's play again! </button>
+        </div>
+
+
+        <script>
+            var arr = ["images/hat.png", "images/boat.png", "images/short.png"];
+            var arrWord = ["hat", "boat" ,"shirt"];
+            var counter = 0;
+            var i = selectRandomImage();
+            var score = 0;
+            var highScore = 0;
+            document.body.classList.add('backGroundBody');
+            let btnPlayAgain = document.querySelector('.playAgain');
+
+            function selectRandomImage(){
+                document.querySelector('.countQuestion').innerText = 'Question number ' + (counter + 1);
+                let index = Math.floor(Math.random() * arr.length);
+                console.log(index);
+                document.getElementById('imgToGuess').src = arr[index];
+                return index;
+            }
+
+            function play(){
+                counter++;
+                if(counter <= 3){
+                    var word = arrWord[i];
+                    var letter = document.getElementById('input').value;
+                    if(!letter){
+                        document.querySelector('.message').innerText = 'No letter 😱';
+                        score = -2;
+                    }else if(letter == word[0]){
+                        document.querySelector('.message').innerText = 'Correct Answer 👍';
+                        score = +5;
+                    }else if(letter != word[0]){
+                        document.querySelector('.message').innerText = 'Not Correct Answer 🥱';
+                        score = -2;
+                    }
+
+                    document.getElementById('input').value = "";
+                    document.querySelector('.score').innerText = "The score is " + score;
+                    if(counter < 3){
+                        i = selectRandomImage();
+                    }
+                }
+            }
+
+            document.querySelector('.play').addEventListener('click', play);
+
+        </script>
+    </body>
+</html>

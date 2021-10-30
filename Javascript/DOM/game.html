@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            body{
+                background-color: #E66B4F;
+            }
+
+            ul{
+                list-style-type: none;
+            }
+
+            .picture{
+                width: 100px;
+                height: 100px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- Partea 1
+        <h1>Create List of Images</h1>
+        <p>Write in textbox name of image and load it. You can select from the list below: </p>
+
+        <ol class="txtList">
+            <li>ex-caca.png</li>
+            <li>ex-smiley.png</li>
+            <li>ex-sort.png</li>
+        </ol>
+
+
+        <input type="text" id="name">
+        <button class="add" onclick="add()">Add picture</button>
+
+        <ul id="list"></ul> -->
+
+
+        <!-- Partea 2 -->
+        <h1>Create List of Images</h1>
+        <p>Write in textbox name of image and load it. You can select from the list below: </p>
+        <p>If the picture is not in list please make alert.</p>
+
+        <ol class="txtList">
+            <li>poop.png</li>
+            <li>smiley.png</li>
+            <li>sort.png</li>
+        </ol>
+
+        <input type="text" id="name">
+        <button class="add" onclick="checkThePicture()">Add picture</button>
+
+        <ul id="list"></ul>    
+
+
+
+        <!-- Partea 3
+        <h1>Create List of Images</h1>
+        <p>Write in textbox name of image and load it. You can select from the list below: </p>
+        <p>If the picture is not in list please make alert.</p>
+        <p>Please make the picture width and height of 100px.</p>
+
+        <ol class="txtList">
+            <li>poop.png</li>
+            <li>smiley.png</li>
+            <li>sort.png</li>
+        </ol>
+
+        <input type="text" id="name">
+        <button class="add" onclick="checkThePicture()">Add picture</button>
+
+        <ul id="list"></ul>     -->
+
+
+
+        <script>
+            // function add(){  // partea 1
+            //     let inputValue = document.getElementById('name').value;
+            //     let ul = document.getElementById('list');
+            //     let li = document.createElement('li');
+            //     let image = document.createElement('img');
+            //     image.src = inputValue;
+            //     li.appendChild(image)
+            //     ul.appendChild(li); 
+            // }
+
+
+            function checkThePicture(){  // partea 2
+                let arr = ['poop.png' , 'smiley.png' , 'sort.png'];
+                let inputValue = document.getElementById('name').value;
+                let checkInputinArray = (arr.includes(inputValue));
+                if(checkInputinArray){
+                    let ul = document.getElementById('list');
+                    let li = document.createElement('li');
+                    let image = document.createElement('img');
+                    image.src = inputValue;
+                    li.appendChild(image)
+                    ul.appendChild(li); 
+                }else{
+                    alert('Picture not found 🤦‍♂️.  Please try again!');
+                }
+            }
+
+
+            // function checkThePicture(){  // partea 3
+            //     let arr = ['poop.png' , 'smiley.png' , 'sort.png'];
+            //     let inputValue = document.getElementById('name').value;
+            //     let checkInputinArray = (arr.includes(inputValue));
+            //     if(checkInputinArray){
+            //         let ul = document.getElementById('list');
+            //         let li = document.createElement('li');
+            //         let image = document.createElement('img');
+            //         image.src = inputValue;
+            //         li.appendChild(image)
+            //         ul.appendChild(li); 
+
+
+            //     }else{
+            //         alert('Picture not found 🤦‍♂️.  Please try again!');
+            //     }
+                
+            // }
+        </script>
+    </body>
+</html>

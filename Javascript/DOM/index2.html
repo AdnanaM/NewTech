@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>Colors</h1>
+    <button onclick="colorRedandBlue()">Color</button>
+
+    <ul id="items">
+        <li>1</li>
+        <li>208</li>
+        <li>99</li>
+    </ul> -->
+
+
+
+
+    <h1>Index Colors</h1>
+    <button onclick="evenOrOdd()">Color</button>
+
+    <ul id="items">
+        <li>1</li>
+        <li>208</li>
+        <li>99</li>
+        <li>100</li>
+        <li>101</li>
+    </ul>
+
+
+    <script>
+        // function colorRedandBlue(){
+        //     let items = document.getElementById('items').querySelectorAll('li');
+        //     for(var i = 0; i < items.length; i++){
+        //         let item = items[i];
+        //         let number = parseInt(item.innerText);
+        //         // console.log(item)
+        //         if(number > 100){
+        //             item.style.color = 'blue';
+        //         }else{
+        //             item.style.color = 'red';
+        //         }
+        //     }
+        // }
+
+
+        function evenOrOdd(){
+            let items = document.getElementById('items').querySelectorAll('li');
+            var index = 0
+            for(var i = 0; i < items.length; i++){
+                let item = items[i];
+                console.log(item)
+                if(i % 2 == 0){
+                    item.style.color = 'green';
+                }else{
+                    item.style.color = 'red'
+                }
+            }
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>
