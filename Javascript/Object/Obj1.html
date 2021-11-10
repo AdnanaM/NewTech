@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <script>
+        var player = new Object();  //exemplu 1 de scriere obiect, folosind sintaxa "new Object"
+        player.name = 'Mike';
+        player.level = 3; 
+        player.points = "8";
+        console.log("This is the first player:")
+        console.log(player);
+
+
+        var player2 = {  // exemplu 2 de scriere obiect.
+            name: "John",
+            level: 4,
+            points: "12",
+        };
+        console.log(player2);
+        // player2.country = "RO";
+        console.log(player2.country); //output: undefined deoarece in obiect nu avem cheia "country".
+
+
+
+
+        function Mouse (color, name, price){   //exemplu 3 de scriere obiect, folosind metoda "Constructor" + this.
+            this.color = color;
+            this.name = name;
+            this.price = price;
+        }
+       
+        var mouse2 = new Mouse("yellow", "HP", "1234");  
+        console.log(mouse2); // output: color: yellow, name: HP, price: 1234.
+
+
+
+
+        function Player (name, level, points) { // ("Alice", 14, "80");
+            this.name = name; // player5.name = "Alice"
+            this.level = level; // player5.level = 14
+            this.points = points; //player5.points = "80"
+        }
+
+        var player5 = new Player ("Alice", 14, "80");
+        var player10 = new Player ("Math", 34, "580");
+        console.log(player5);
+
+
+
+
+        
+
+        const player3 = {};   //exemplu 4 de scriere obiect.
+        player3["name"] = 'Liz';
+        player3["level"] = 6; 
+        player3["points"] = "18";
+        console.log(player3);
+
+
+
+
+        const player4 = {name: "Bob", level: 15, points: "100"};   //exemplu 5 de scriere obiect.
+        console.log(player4);
+
+    </script>
+    </body>
+</html>

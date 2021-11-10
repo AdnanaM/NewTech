@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            const persoana = {
+                afisarePersoana(oras, strada) { // (nume, prenume)
+                    console.log(this.nume + " " + this.prenume + " " + oras + " " + strada);
+                    //console.log(`Numele este ${this.nume} ${this.prenume}, ${this.oras}`);
+                    //return this.nume + " " + this.prenume;
+                }
+            }
+
+            const persoana1 = {
+                nume: "Tanase",
+                prenume: "Ana"
+            }
+
+            const persoana2 = {
+                nume: "Dumitrescu",
+                prenume: "Mircea"
+            }
+
+            persoana.afisarePersoana.call(persoana1, "Bucuresti", "Victoriei");
+            persoana.afisarePersoana.call(persoana2, "Tulcea", "Basarab");
+
+            persoana.afisarePersoana.apply(persoana1);
+            persoana.afisarePersoana.apply(persoana2);
+            persoana.afisarePersoana.apply(persoana1, ["Bucuresti", "Victoriei"]);
+            persoana.afisarePersoana.apply(persoana2, ["Tulcea", "Basarab"]);
+
+        </script>
+    </body>
+</html>

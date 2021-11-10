@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function add (n1, n2){
+                console.log(n1 + n2);
+            }
+            function sub (n1, n2){
+                console.log(n1 - n2);
+            }
+            function mult (n1, n2){
+                console.log(n1 * n2);
+            }
+
+            //callback
+            function f (n1, n2, chemare, chemare2){
+                chemare(n1, n2);
+                chemare2(n1, 3);
+            }
+
+            f(5, 6, mult, add); // 30 // 11
+            f(11, 6, sub, mult); // 5 //66
+        </script>
+    </body>
+</html>

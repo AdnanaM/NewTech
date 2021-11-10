@@ -24,12 +24,12 @@
         </div> 
 
         <div class="playAgain hidden">
-            <button>Game over! Let's play again! </button>
+            <button id="btnPlayAgain">Game over! Let's play again! </button>
         </div>
 
 
         <script>
-            var arr = ["images/hat.png", "images/boat.png", "images/short.png"];
+            var arr = ["images/hat.png", "images/boat.png", "images/short.png"];  //part 1
             var arrWord = ["hat", "boat" ,"shirt"];
             var counter = 0;
             var i = selectRandomImage();
@@ -38,7 +38,15 @@
             document.body.classList.add('backGroundBody');
             let btnPlayAgain = document.querySelector('.playAgain');
 
-            function selectRandomImage(){
+            function showbtnPlayAgain(){   //part 3
+                btnPlayAgain.classList.remove('hidden');
+            }
+
+            function hiddenbtnPlayAgain(){
+                btnPlayAgain.classList.add('hidden');
+            }
+
+            function selectRandomImage(){   //part 1 
                 document.querySelector('.countQuestion').innerText = 'Question number ' + (counter + 1);
                 let index = Math.floor(Math.random() * arr.length);
                 console.log(index);
@@ -46,32 +54,57 @@
                 return index;
             }
 
-            function play(){
+            function play(){   // part 2 
                 counter++;
                 if(counter <= 3){
                     var word = arrWord[i];
                     var letter = document.getElementById('input').value;
                     if(!letter){
                         document.querySelector('.message').innerText = 'No letter 😱';
-                        score = -2;
+                        score -= 2;
                     }else if(letter == word[0]){
                         document.querySelector('.message').innerText = 'Correct Answer 👍';
-                        score = +5;
+                        score += 5;
                     }else if(letter != word[0]){
                         document.querySelector('.message').innerText = 'Not Correct Answer 🥱';
-                        score = -2;
+                        score -= 3;
                     }
 
                     document.getElementById('input').value = "";
-                    document.querySelector('.score').innerText = "The score is " + score;
+                    document.querySelector('.score').innerText = "score: " + score;
                     if(counter < 3){
                         i = selectRandomImage();
+                    }
+
+                    if(counter > 2){
+                        gameOver();
                     }
                 }
             }
 
             document.querySelector('.play').addEventListener('click', play);
 
+            function gameOver(){   //part 4
+                if(score > highScore){
+                    highScore = score;
+                    document.querySelector('.highscore').innerText = 'High score: ' + score + "🥳";
+                }
+
+                document.body.classList.remove('backGroundBody');
+                showbtnPlayAgain();
+            }
+
+
+            document.querySelector('.playAgain').addEventListener('click', reset);
+            function reset(){
+                document.body.classList.add('backGroundBody');
+                counter = 0;
+                i = selectRandomImage();
+                score = 0;
+                document.querySelector('.score').innerText = 0;
+                document.getElementById('input').value = "";
+                hiddenbtnPlayAgain();
+            }
         </script>
     </body>
 </html>

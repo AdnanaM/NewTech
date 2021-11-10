@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h4>Receive from the user 10 numbers using a prompt and alert how many different numbers the users print.</h4>
+
+        <button onclick="howManyNumbers()">Click Me</button>
+        <script>
+            function howManyNumbers(){
+                const mySet = new Set();
+                for(var i = 0; i < 10; i++){
+                    const name = prompt('Type a number');
+                    mySet.add(name);
+                }
+                alert(mySet.size)
+            }
+        </script>
+    </body>
+</html>
