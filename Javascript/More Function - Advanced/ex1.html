@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const person = {
+                username: '',
+                password: '',
+                hobbies: [],
+                addHobby(hobby, description){
+                    objHobbies = {hobby:hobby, description:description}
+                    this.hobbies.push(objHobbies);
+                    console.log(`Add ${hobby} to ${this.username}`)
+                }
+            }
+            let mike = {
+                username: 'mike',
+                password: '123',
+                hobbies: [],
+            }
+
+            // call
+            mikeAddHobby = person.addHobby;
+            mikeAddHobby.call(mike, "basketball", "I love to play");
+
+            //apply
+            mikeAddHobby.apply(mike, ["basketball", "I love to play"]);
+
+            //bind
+            let mikesHob = mikeAddHobby.bind(mike);
+            mikesHob("basketball", "I love to play");
+            console.log(mike);
+        </script>
+    </body>
+</html>

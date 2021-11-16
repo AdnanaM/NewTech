@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+        adnana </br>
+        adnana
+
+        <script>
+            let cars = [{
+                color: "red",
+                price: 2000,
+                benefits: ["electric windows", "glossy paint"]
+            }, {
+                color: "blue",
+                price: 4500,
+                benefits: ["electric windows", "modern tires", ]
+            }, {
+                color: "pink",
+                price: 5000,
+                benefits: ["electric windows", "modern tires", "glossy paint"]
+            }, {
+                color: "white",
+                price: 7800,
+                benefits: ["electric windows", ]
+            }];
+
+            //Add using foreach loop 20% for all car prices.
+            // cars.forEach(car => {
+            //     console.log(car.price * 0.2)
+            // });
+
+
+
+            //Add using foreach loop and remove all cars with price above 5000. Varianta din material, cu un singur price mai mare de 5000.
+            // cars.forEach((car, index) => {
+            //     if(car.price > 5000){
+            //         cars.splice(index, 1);
+            //     }
+            // });
+            // console.log(cars)
+
+
+
+            ////Add using foreach loop and remove all cars with price above 5000. In cazul in care am avea doua price peste 5000, se executa un for invers (se incepe cu ultimu element din array)
+            // for(let i = cars.length-1; i >=0; i--){
+            //     if(cars[i].price > 5000){
+            //         cars.splice(i , 1)
+            //     }
+            // }
+
+
+
+
+            //Varianta de mai sus dar mai simplist facuta.
+            // cars = cars.filter(c => c.price <= 5000);
+            // console.log(cars);
+        </script>
+    </body>
+</html>
