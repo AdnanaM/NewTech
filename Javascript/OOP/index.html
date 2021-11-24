@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // function Person(first, last, age, gender, interests) {
+            //     this.name = {
+            //         first : first,
+            //         last : last       
+            //     };
+            //     this.age = age;
+            //     this.gender = gender;
+            //     this.interests = interests;
+            //     this.bio = function() {
+            //         alert(this.name.first + ' ' + this.name.last + ' is ' + this.age +' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] +'.');       
+            //     };
+            //     this.greeting = function() {
+            //         alert('Hi! I\'m ' + this.name.first + '.');       
+            //     };       
+            // }
+            // let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+            // person1['age'];
+            // console.log(person1['age'])
+            // person1.interests[1]
+            // console.log(person1.interests[1])
+            // person1.bio()
+
+
+
+            function Shape(color, x, y){
+                this.color = color;
+                this.x = x;
+                this.y = y;
+                this.move = function (x, y){
+                    this.x +=x
+                    this.y +=y
+                    alert(this.x + " " + this.y)
+                };
+            }
+
+            let first = new Shape("red", 50, 30);
+           first.move(100, 100);
+           console.log(first)
+        </script>
+    </body>
+</html>

@@ -7,7 +7,7 @@
 //     document.body.appendChild(btn);
 // }
 
-//a. Clicking on button 4, the output will be "5". Var is a function scoped, because it is declared within a function. 
+//a. Clicking on button 4, the output will be "5". 
 //b. We have to change the variable and declare it with "let".
 
 
@@ -66,15 +66,37 @@
 
 
 
-let dog = {
-    name: 'doggo',
-    sayName(){
-        console.log(this.name);
-    }
-}
+// let dog = {  //exercise 5 
+//     name: 'doggo',
+//     sayName(){
+//         console.log(this.name);
+//     }
+// }
 
-// let sayName = dog.sayName; //Incorrect form
-// sayName();
+// // let sayName = dog.sayName; //Incorrect form
+// // sayName();
 
-let sayName = dog.sayName(); //Correct form
-sayName;
+// let sayName = dog.sayName(); //Correct form
+// sayName;
+
+
+
+
+// function clocki(){
+//         let time = new Date();
+//         let seconds = time.getSeconds();
+//         let minutes = time.getMinutes();
+//         let hour = time.getHours();
+//         let clock = `${hour} : ${minutes} : ${seconds}`
+//         document.getElementById("clock").innerText = clock;
+//     }
+
+//     setInterval(clocki, 1000);
+
+//     let date = new Date()
+//     let roTime = date.toLocaleString("en-US", {timeZone:"Europe/Bucharest"})
+//     console.log("Romania date: " + roTime);
+
+//     let usaTime = date.toLocaleString("en-US", {timeZone:"America/New_York"})
+//     console.log("USA date: " + usaTime);
+

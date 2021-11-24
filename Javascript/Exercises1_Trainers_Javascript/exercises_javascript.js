@@ -1,61 +1,61 @@
-function print(){  //exercise 1 
-    var array1 = [
-        [1, -2, 19, 24], 
-        [18, 131, 7, 2], 
-        [74, 10, 37, 2], 
-        [3, 5, 8, 41],
-        [23, 12, 6, 71]
-    ]
+// function print(){  //exercise 1 
+//     var array1 = [
+//         [1, -2, 19, 24], 
+//         [18, 131, 7, 2], 
+//         [74, 10, 37, 2], 
+//         [3, 5, 8, 41],
+//         [23, 12, 6, 71]
+//     ]
     
-    for(var i = 0; i < array1.length; i++){
-        console.log(`Sub-array ${i} : ${array1[i]}`);
-        for(var j = 0; j < array1[i].length; j++){
-            console.log(array1[i][j]);
-        }
-    }
+//     for(var i = 0; i < array1.length; i++){
+//         console.log(`Sub-array ${i} : ${array1[i]}`);
+//         for(var j = 0; j < array1[i].length; j++){
+//             console.log(array1[i][j]);
+//         }
+//     }
     
-    var array2 = [
-        [1, 0, 12, 4], 
-        [-8, 121, 49, 64], 
-        [17, 0, 7, 27], 
-        [7, 4, 28, 14],
-        [3, 10, 26, 7]
-    ];
-    for(var i = 0; i < array2.length; i++){
-        console.log(`Sub-array ${i} : ${array2[i]}`);
-        for(var j = 0; j < array2[i].length; j++){
-            console.log(array2[i][j]);
-        }
-    }
+//     var array2 = [
+//         [1, 0, 12, 4], 
+//         [-8, 121, 49, 64], 
+//         [17, 0, 7, 27], 
+//         [7, 4, 28, 14],
+//         [3, 10, 26, 7]
+//     ];
+//     for(var i = 0; i < array2.length; i++){
+//         console.log(`Sub-array ${i} : ${array2[i]}`);
+//         for(var j = 0; j < array2[i].length; j++){
+//             console.log(array2[i][j]);
+//         }
+//     }
 
-    var array3 =[
-        [1, 2, 1, 24], 
-        [8, 111, 9, 4], 
-        [7, 450, 67, 27], 
-        [127, 4, 28,14], 
-        [3, 10, 26, 7]
-    ];
-    for(var i = 0; i < array3.length; i++){
-        console.log(`Sub-array ${i} : ${array3[i]}`);
-        for(var j = 0; j < array3[i].length; j++){
-            console.log(array3[i][j]);
-        }
-    }
+//     var array3 =[
+//         [1, 2, 1, 24], 
+//         [8, 111, 9, 4], 
+//         [7, 450, 67, 27], 
+//         [127, 4, 28,14], 
+//         [3, 10, 26, 7]
+//     ];
+//     for(var i = 0; i < array3.length; i++){
+//         console.log(`Sub-array ${i} : ${array3[i]}`);
+//         for(var j = 0; j < array3[i].length; j++){
+//             console.log(array3[i][j]);
+//         }
+//     }
 
-    var array4 = [
-        [1, 2, 1, 24], 
-        [85, 511, 39, 47], 
-        [34, 12, 77, 97], 
-        [7, 4, 28,14], 
-        [3, -10, 56, 7]
-    ];
-    for(var i = 0; i < array4.length; i++){
-        console.log(`Sub-array ${i} : ${array4[i]}`);
-        for(var j = 0; j < array4[i].length; j++){
-            console.log(array4[i][j]);
-        }
-    }
-}
+//     var array4 = [
+//         [1, 2, 1, 24], 
+//         [85, 511, 39, 47], 
+//         [34, 12, 77, 97], 
+//         [7, 4, 28,14], 
+//         [3, -10, 56, 7]
+//     ];
+//     for(var i = 0; i < array4.length; i++){
+//         console.log(`Sub-array ${i} : ${array4[i]}`);
+//         for(var j = 0; j < array4[i].length; j++){
+//             console.log(array4[i][j]);
+//         }
+//     }
+// }
 
 
 // function sum(array){  //exercise 2 
@@ -184,16 +184,16 @@ function print(){  //exercise 1
 // }
 
 
-function asteriscPattern(){  //exercise 8.1
-    var str = "";
-    for(var i = 1; i <= 5; i++){
-        for(var j = 1; j <= i; j++){
-            str+=j;
-        }
-        str+="\n"
-    }
-    document.getElementById('output').innerText = str;
-}
+// function asteriscPattern(){  //exercise 8.1
+//     var str = "";
+//     for(var i = 1; i <= 5; i++){
+//         for(var j = 1; j <= i; j++){
+//             str+=j;
+//         }
+//         str+="\n"
+//     }
+//     document.getElementById('output').innerText = str;
+// }
 
 
 // function multiples(){  //exercise 9 
