@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Products</title>
+        <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        body {
+            background:hsl(110, 100%, 64%);
+        }
+        .container{
+            padding:20px;
+        }
+        .cards{
+            padding: 5px;
+        }
+        .card{
+            border: 5px solid royalblue;
+            width: 25%;
+            border-radius: 10px;
+            padding: 5px;
+            font-size: 20px;
+            margin:10px 10px;
+            float: left;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>💛 {%PRODUCT%} 💙</h1>
+            <div>
+                <p>Description : {%DESCRIPTION%}</p>
+                <p>Price : {%PRICE%}</p>
+                <p>Image : {%IMAGE%}</p>
+            </div>
+        </div>
+    </body>
+</html>
