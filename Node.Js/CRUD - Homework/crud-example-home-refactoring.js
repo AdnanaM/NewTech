@@ -6,18 +6,19 @@ var fs = require('fs');
 
 let players = JSON.parse(fs.readFileSync('./data/player.json', 'utf-8'));
 
+
 //Get Players
-app.get('/api/v1/players', function(req, res){
+let getAllPlayers = (req, res) => {
     res.status(200).json(
         {
             data: players
         }
     );
-});
+};
 
 
 //Create new Player
-app.post('/api/v1/players', function(req, res){
+let createPlayer = (req, res) => {
     const id = players[players.length - 1].id + 1;
     const newPlayer = Object.assign({id:id}, req.body);
     players.push(newPlayer);
@@ -27,11 +28,11 @@ app.post('/api/v1/players', function(req, res){
             {data: players}
         )
     });
-});
+};
 
 
 //Get player by ID
-app.get('/api/v1/players/:id', function(req, res){
+let getPlayerByID = (req, res) => {
     const id = Number(req.params.id);
     const player = players.find(player => player.id === id);
 
@@ -43,36 +44,11 @@ app.get('/api/v1/players/:id', function(req, res){
     res.status(200).json(
         {data: player}
     )
-});
+};
 
 
-
-//Delete player
-app.delete('/api/v1/players/:id', (req, res) => {
-    const id = Number(req.params.id);
-    const player = players.find(player => player.id === id);
-    if(player === undefined){
-        return res.status(404).json(
-            {message: 'id not found'}
-        )
-    };
-
-    var index = players.findIndex(obj => obj.id == id);
-    players.splice(index, 1);
-    fs.writeFile("./data/player.json", JSON.stringify(players), err => {
-        res.status(200).json(               
-            {
-                status:"success delete",
-                data:player               
-            }
-        )      
-    });
-});
-
-
-
-//  Update - PATCH(UPDATE)
-app.patch('/api/v1/players/:id', (req, res)=>{
+//Update Player
+let updatePlayerById = (req, res) => {
     const id = Number(req.params.id)
     const player = players.find(el => el.id ===id);
 
@@ -97,7 +73,34 @@ app.patch('/api/v1/players/:id', (req, res)=>{
             }
         )
     });
-});
+};
+
+
+
+//Delete Player 
+let deletePlayerById = (req, res) => {
+    const id = Number(req.params.id);
+    const player = players.find(player => player.id === id);
+    if(player === undefined){
+        return res.status(404).json(
+            {message: 'id not found'}
+        )
+    };
+
+    var index = players.findIndex(obj => obj.id == id);
+    players.splice(index, 1);
+    fs.writeFile("./data/player.json", JSON.stringify(players), err => {
+        res.status(200).json(               
+            {
+                status:"success delete",
+                data:player               
+            }
+        )      
+    });
+};
+app.get('/api/v1/players', getAllPlayers);
+app.post('/api/v1/players', createPlayer);
+app.get('/api/v1/players/:id', getPlayerByID);
+app.patch('/api/v1/players/:id', updatePlayerById);
+app.delete('/api/v1/players/:id', deletePlayerById);
 app.listen(port);
-
-
