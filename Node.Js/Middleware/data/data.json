@@ -1,0 +1,17 @@
+[
+  {
+    "id": 0,
+    "name": "car update",
+    "price": 200000,
+    "description": "speed car with controller update",
+    "picture": "car.png"
+  },
+  {
+    "id": 1,
+    "name": "test car",
+    "price": 500,
+    "description": "very very test speed car with controller",
+    "picture": "car.png"
+  },
+  { "id": 3 }
+]

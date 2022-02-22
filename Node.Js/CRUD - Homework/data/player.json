@@ -1,1 +1,16 @@
-[{"id":0,"firstname":"adnana","lastname":"muresan","age":18,"team":"asd"},{"id":1,"firstname":"Carmelo","lastname":"Anthony","age":37,"team":"Lakers"}]
+[
+  {
+    "id": 0,
+    "firstname": "adnana",
+    "lastname": "muresan",
+    "age": 18,
+    "team": "asd"
+  },
+  {
+    "id": 1,
+    "firstname": "Carmelo",
+    "lastname": "Anthony",
+    "age": 37,
+    "team": "Lakers"
+  }
+]
